@@ -1,0 +1,7 @@
+resources:
+- ingress.yaml
+- deployment.yaml
+- service.yaml
+- registry.yaml
+- namespace.yaml
+- secrets.yaml

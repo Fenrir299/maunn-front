@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.up-shadow {
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.bg-headerband {
+  background-image: url('/src/assets/home/bandheader-web.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-headerband-xs {
+  background-image: url('/src/assets/home/headerband-web-xs.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+html {
+  background: #252E42;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 16px;
+}
+
+/* Track */
+.dark::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #252E42;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #B13978;
+  border-radius: 100vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #B13978;
+}
+
+.purple {
+  transform: translateZ(0);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  z-index: -5;
+  top: -50%;
+  right: 0%;
+  height: 140%;
+  width: 120%;
+  mix-blend-mode: screen;
+  background: var(--grain);
+  background-size: 100px;
+  -webkit-mask-image: radial-gradient(circle closest-side at 50% 50%, rgba(0,0,0,0.15), transparent 100%);
+  mask-image: radial-gradient(circle closest-side at 50% 50%, rgba(0,0,0,0.15), transparent 100%);
+  
+
+}

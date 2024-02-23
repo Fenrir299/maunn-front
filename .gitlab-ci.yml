@@ -1,0 +1,75 @@
+stages:
+    - build
+    #- test
+    - push
+    - argocd-sync
+
+image: node:18.1.0
+
+variables:
+  TAG: "1.0.0"
+  REPO: "camillefront/show-case"
+  IMAGE_NAME: "camille-show-case"
+
+build:
+  stage: build
+  before_script:
+    - npm install
+  script:
+    - export NODE_OPTIONS=--openssl-legacy-provider
+    - npm run build
+      #artifacts:
+      #paths:
+      #- node_modules
+
+  #test:
+  #stage: test
+  #dependencies:
+  #- build
+  #script:
+  #- npm test ----outputFile=coverage.xml
+  #coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+
+push:
+  stage: push
+  image: docker:20.10.10
+  variables:
+    DOCKER_REPO: ""
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+      variables:
+        DOCKER_REPO: "production"
+    - if: $CI_COMMIT_BRANCH == "develop"
+      variables:
+        DOCKER_REPO: "developement"
+    - if: $DOCKER_REPO != ""
+      when: on_success
+    - when: never
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker build -t $CI_REGISTRY/$REPO/$DOCKER_REPO/$IMAGE_NAME:latest .
+    - docker tag $CI_REGISTRY/$REPO/$DOCKER_REPO/$IMAGE_NAME:latest $CI_REGISTRY/$REPO/$DOCKER_REPO/$IMAGE_NAME:${TAG}
+    - docker push $CI_REGISTRY/$REPO/$DOCKER_REPO/$IMAGE_NAME:latest
+    - docker push $CI_REGISTRY/$REPO/$DOCKER_REPO/$IMAGE_NAME:${TAG}
+
+argocd-sync:
+  stage: argocd-sync
+  image: debian:stable-slim
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+      variables:
+        DEPLOYMENT_TYPE: "-prod"
+      when: on_success
+    - if: $CI_COMMIT_BRANCH == "develop"
+      variables:
+        DEPLOYMENT_TYPE: "-dev"
+      when: on_success
+    - when: never
+  before_script:
+    - apt-get update && apt-get install -y curl
+    - curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+    - install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+  script:
+    - argocd login argocd.camille-eip.com --grpc-web --username "$ARGOCD_USERNAME" --password "$ARGOCD_PASSWORD"
+    - argocd app sync show-case$DEPLOYMENT_TYPE --grpc-web --resource apps:Deployment:show-case-deployment$DEPLOYMENT_TYPE --force

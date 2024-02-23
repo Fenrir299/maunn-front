@@ -1,0 +1,11 @@
+- op: replace
+  path: /spec/rules/0/host
+  value: show-case-dev.camille-eip.com
+
+- op: replace
+  path: /spec/tls/0/hosts/0
+  value: show-case-dev.camille-eip.com
+
+- op: replace
+  path: /spec/tls/0/secretName
+  value: show-case-ssl-dev

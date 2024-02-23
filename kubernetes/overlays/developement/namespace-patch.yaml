@@ -1,0 +1,3 @@
+- op: replace
+  path: /metadata/labels/app
+  value: show-case-dev

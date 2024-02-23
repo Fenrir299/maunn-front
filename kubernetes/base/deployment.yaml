@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: show-case
+  name: show-case-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: show-case
+  template:
+    metadata:
+      labels:
+        app: show-case
+    spec:
+      imagePullSecrets:
+        - name: show-case-registry
+      containers:
+        - name: show-case
+          image: registry.gitlab.com/camillefront/show-case/production/camille-show-case
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          envFrom:
+            - secretRef:
+                name: show-case-secret

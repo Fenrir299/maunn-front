@@ -1,0 +1,11 @@
+nameSuffix: "-prod"
+namespace: "show-case-prod"
+resources:
+- ../../base
+patches:
+  - target:
+      version: v1
+      kind: Namespace
+      name: show-case
+    path: namespace-patch.yaml
+

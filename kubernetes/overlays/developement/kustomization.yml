@@ -1,0 +1,22 @@
+nameSuffix: "-dev"
+namespace: "show-case-dev"
+resources:
+- ../../base
+patches:
+  - target:
+      group: networking.k8s.io
+      version: v1
+      kind: Ingress
+      name: show-case-ingress
+    path: ingress-patch.yaml
+  - target:
+      version: v1
+      kind: Deployment
+      name: show-case-deployment
+    path: deployment-patch.yaml
+  - target:
+      version: v1
+      kind: Namespace
+      name: show-case
+    path: namespace-patch.yaml
+

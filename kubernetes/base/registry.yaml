@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: show-case-registry
+  namespace: show-case
+data:
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJyZWdpc3RyeS5naXRsYWIuY29tIjogewoJCQkiYXV0aCI6ICJkR2hsYjJSdmNtVm5iM3BoY21SQWNISnZkRzl1YldGcGJDNWpiMjA2WlZoemRDRjZWU1pSZERZNGVGST0iCgkJfQoJfQp9
+type: kubernetes.io/dockerconfigjson

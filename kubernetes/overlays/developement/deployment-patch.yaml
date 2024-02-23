@@ -1,0 +1,3 @@
+- op: replace
+  path: /spec/template/spec/containers/0/image
+  value: registry.gitlab.com/camillefront/show-case/developement/camille-show-case
