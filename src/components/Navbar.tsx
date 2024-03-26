@@ -11,10 +11,10 @@ import {
 
 const navigation = [
   { name: "Présentation", href: "/" },
-  { name: "Sécteurs d'activités", href: "/About" },
-  { name: "Contact", href: "/Island" },
-  { name: "Carrières", href: "/Blog" },
-  { name: "Entreprises", href: "/Nacre" },
+  { name: "Sécteurs d'activités", href: "/Sectors" },
+  { name: "Contact", href: "/Contact" },
+  { name: "Carrières", href: "/Career" },
+  { name: "Entreprises", href: "/Partners" },
 ];
 
 const Navbar: React.FC = () => {
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
                   <img
                     className="block h-6 w-auto lg:hidden"
                     src={Logo}
-                    alt="camille"
+                    alt="maunn"
                   />
                   <div className="hidden lg:flex lg:flex-row items-center">
                     <img className="h-8 w-auto" src={Logo} alt="maunn" />
@@ -80,23 +80,13 @@ const Navbar: React.FC = () => {
                     key={item.name}
                     to={item.href}
                     className={`px-3 py-2 rounded-md  font-bold  hover:underline ${
-                      location.pathname === item.href && " dark:text-tierce"
+                      location.pathname === item.href && " text-secondary"
                     }`}
                   >
                     {item.name}
                   </NavLink>
                 ))}
               </div>
-              <button
-                className="absolute top-10 right-5 lg:right-10 lg:top-8 rounded-full dark:text-white"
-                onClick={handleThemeSwitch}
-              >
-                {theme === "dark" ? (
-                  <MoonIcon className="h-8 w-8 hover:text-secondary animate-bounce" />
-                ) : (
-                  <SunIcon className="h-8 w-8 hover:text-secondary animate-bounce" />
-                )}
-              </button>
             </div>
           </div>
 

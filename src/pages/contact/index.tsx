@@ -1,10 +1,10 @@
 import React from "react";
-import FormContact from "./FormContact";
+import Header from "./Header";
 
 const Contact: React.FC = () => {
   return (
-    <section className="bg-white dark:bg-background overflow-x-hidden w-full">
-      <FormContact />
+    <section className="">
+      <Header />
     </section>
   );
 };

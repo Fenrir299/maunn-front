@@ -1,8 +1,6 @@
 import React from "react";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import LogoPurple from "../../assets/logos/logo_maunn_mono_purple.svg";
-import "../../index.css";
-import { Link } from "react-router-dom";
 
 interface HeaderProps {
   handleSetActive: (to: React.SetStateAction<string>) => void;
@@ -11,8 +9,10 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ handleSetActive }) => {
   return (
     <>
-      <Element name="header">
-        <section className="mb-48 mt-24">
+      <Element name="partners">
+        {/* Section d'en-tête */}
+
+        <section className="mb-48 mt-24 items-right justify-end ">
           <div className=" ">
             <div className="">
               <img
@@ -21,17 +21,20 @@ const Header: React.FC<HeaderProps> = ({ handleSetActive }) => {
               ></img>
             </div>
 
-            <div>
-              <div className="max-w-[42rem] relative z-10 ">
+            <div className="flex justify-center text-center">
+              <div className="max-w-[64rem] relative z-10  ">
                 <h1 className="font-black uppercase text-5xl text-white mb-8 mt-8">
-                  {"The desire to change technology."}
+                  {"Partenaires MAUNN."}
                 </h1>
+
                 <h2 className="text-white text-opacity-60 text-2xl sm:text-3xl">
                   {
-                    "MAUNN est l’architecte des grandes transformations des entreprises. Nous mettons en relations nos experts avec nos partenaires."
+                    "Collaborons pour créer l'avenir ensemble. MAUNN travaille en partenariat avec des entreprises de premier plan pour catalyser la transformation digitale et relever les défis technologiques du futur."
                   }
                 </h2>
               </div>
+            </div>
+            <div className=" flex items-center justify-center w-full">
               <div className="py-6 mt-4 flex items-start sm:items-center gap-6 flex-col sm:flex-row">
                 <Link
                   to="/contact"
@@ -46,6 +49,8 @@ const Header: React.FC<HeaderProps> = ({ handleSetActive }) => {
             </div>
           </div>
         </section>
+
+        {/* Section du contenu de la page Partenaires */}
       </Element>
     </>
   );

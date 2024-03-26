@@ -1,8 +1,6 @@
 import React from "react";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import LogoPurple from "../../assets/logos/logo_maunn_mono_purple.svg";
-import "../../index.css";
-import { Link } from "react-router-dom";
 
 interface HeaderProps {
   handleSetActive: (to: React.SetStateAction<string>) => void;
@@ -24,11 +22,11 @@ const Header: React.FC<HeaderProps> = ({ handleSetActive }) => {
             <div>
               <div className="max-w-[42rem] relative z-10 ">
                 <h1 className="font-black uppercase text-5xl text-white mb-8 mt-8">
-                  {"The desire to change technology."}
+                  {"Rejoignez l'équipe MAUNN."}
                 </h1>
                 <h2 className="text-white text-opacity-60 text-2xl sm:text-3xl">
                   {
-                    "MAUNN est l’architecte des grandes transformations des entreprises. Nous mettons en relations nos experts avec nos partenaires."
+                    "Vous êtes passionné par la technologie et vous cherchez à faire partie d'une équipe innovante ? MAUNN offre des opportunités de carrière stimulantes. Rejoignez-nous pour participer aux grandes transformations des entreprises."
                   }
                 </h2>
               </div>

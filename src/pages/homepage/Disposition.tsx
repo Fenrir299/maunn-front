@@ -15,7 +15,7 @@ const Disposition: React.FC = () => {
             {"Mise à disposition d'experts et de managers de transition."}
           </dt>
 
-          <dl className="text-tierce py-8 text-xl md:text-2xl">
+          <dl className="text-white text-opacity-60 py-8 text-xl md:text-2xl">
             {
               "MAUNN est spécialisé dans le conseil, l’expertise et vous assiste dans réalisation de l’ensemble de vos projets numériques. De l’expression du besoin au déploiement de la solution."
             }
@@ -23,7 +23,7 @@ const Disposition: React.FC = () => {
           <dt className="text-2xl font-semdibold mb-1 text-white">
             {"Assitance dans vos projets informatiques"}
           </dt>
-          <dl className="text-tierce py-8 text-xl md:text-2xl">
+          <dl className="text-white text-opacity-60 py-8 text-xl md:text-2xl">
             {
               " MAUNN vous assiste sur l’ensemble des étapes d’un projet informatique. MAUNN intervient également en tant que manager de transition. Innovation technique, disponibilité, et conseil sont les valeurs autour desquelles s’articule notre vision."
             }

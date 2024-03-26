@@ -15,10 +15,10 @@ const Ender: React.FC<EnderProps> = ({ handleSetActive }) => {
           <div className="flex justify-center ">
             <div>
               <div className="max-w-[42rem] relative z-10 ">
-                <h1 className="font-black uppercase text-5xl text-white mb-8 mt-8 text-center">
-                  {"The desire to change technology."}
+                <h1 className="font-black uppercase text-5xl text-white mb-8 mt-8 text-center ">
+                  {"Improve your business."}
                 </h1>
-                <h2 className="text-tierce text-2xl sm:text-3xl text-center">
+                <h2 className="text-white text-opacity-60 text-2xl sm:text-3xl text-center">
                   {
                     "MAUNN est l’architecte des grandes transformations des entreprises. Nous mettons en relations nos experts avec nos partenaires."
                   }

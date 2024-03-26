@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Events, scrollSpy } from "react-scroll";
 import Header from "./Header";
-import Let from "./Let";
-import Tools from "./Tools";
-import Activities from "./Disposition";
-import Rewards from "./Rewards";
-import Ender from "./Ender";
-import Alert from "../../components/Alert";
-import Disposition from "./Disposition";
-import Consulting from "./Consulting";
-import Master from "./Master";
+import Body from "./Body";
 
-const Homepage: React.FC = () => {
+const Career: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeSection, setActiveSection] = useState("section1");
 
@@ -38,11 +30,8 @@ const Homepage: React.FC = () => {
   return (
     <div className="">
       <Header handleSetActive={handleSetActive} />
-      <Disposition />
-      <Master handleSetActive={handleSetActive} />
-      <Consulting />
-      <Ender handleSetActive={handleSetActive} />
+      <Body />
     </div>
   );
 };
-export default Homepage;
+export default Career;

@@ -13,6 +13,9 @@ import Nacre from "./pages/nacre";
 import Pro from "./pages/pro";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Sector from "./pages/sectors";
+import Career from "./pages/career/Index";
+import Partners from "./pages/partners/Index";
 
 const Container: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
@@ -32,9 +35,9 @@ const App: React.FC = () => {
           {/* <Container> */}
           <Route path="/" element={<Homepage />} />
           <Route path="/Island" element={<Island />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Nacre" element={<Nacre />} />
-          <Route path="/Pro" element={<Pro />} />
+          <Route path="/Sectors" element={<Sector />} />
+          <Route path="/Career" element={<Career />} />
+          <Route path="/Partners" element={<Partners />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

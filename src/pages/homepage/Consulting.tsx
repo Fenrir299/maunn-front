@@ -7,20 +7,22 @@ const Consulting: React.FC = () => {
       <section className="flex flex-col md:flex-row text-left items-center justify-between pt-12">
         <div className="max-w-2xl">
           <dt className="text-2xl font-semdibold mb-1 text-white">
-            {"Mise à disposition d'experts et de managers de transition."}
+            {
+              "Plus qu'un prestataire, un partenaire sur l'ensemble de vos projets."
+            }
           </dt>
 
-          <dl className="text-tierce py-8 text-xl md:text-2xl">
+          <dl className="text-white text-opacity-60  py-8 text-xl md:text-2xl">
             {
-              "MAUNN est spécialisé dans le conseil, l’expertise et vous assiste dans réalisation de l’ensemble de vos projets numériques. De l’expression du besoin au déploiement de la solution."
+              "MAUNN se veut être un partenaire de choix vous accompagnant sur vos projets de l’étude à la réalisation, de la Clienttenance à l’évolution . Soucieux et à l’écoute, nos experts sont disposés à trouver des solutions et des compromis à vos problématiques métiers. "
             }
           </dl>
           <dt className="text-2xl font-semdibold mb-1 text-white">
             {"Assitance dans vos projets informatiques"}
           </dt>
-          <dl className="text-tierce py-8 text-xl md:text-2xl">
+          <dl className="text-white text-opacity-60 py-8 text-xl md:text-2xl">
             {
-              " MAUNN vous assiste sur l’ensemble des étapes d’un projet informatique. MAUNN intervient également en tant que manager de transition. Innovation technique, disponibilité, et conseil sont les valeurs autour desquelles s’articule notre vision."
+              " Se formant continuellement aux nouvelles technologies, nos développeurs sont à même de prendre en charge tout ou partie de vos projets."
             }
           </dl>
         </div>
