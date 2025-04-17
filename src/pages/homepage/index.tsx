@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Events, scrollSpy } from "react-scroll";
 import Header from "./Header";
-import Let from "./Let";
 import Tools from "./Tools";
 import Activities from "./Disposition";
 import Rewards from "./Rewards";

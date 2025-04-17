@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Empêche l'indexation des pages de développement
+Disallow: /dev/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://www.maunn.fr/sitemap.xml

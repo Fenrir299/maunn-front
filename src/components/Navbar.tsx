@@ -2,23 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../assets/logos/logo_maunn_mono_purple.svg";
 import { Disclosure } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  MoonIcon,
-  SunIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Présentation", href: "/" },
-  { name: "Sécteurs d'activités", href: "/Sectors" },
+  { name: "Secteurs d'activités", href: "/Sectors" },
   { name: "Contact", href: "/Contact" },
   { name: "Carrières", href: "/Career" },
   { name: "Entreprises", href: "/Partners" },
 ];
 
 const Navbar: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [theme, setTheme] = useState<string>("");
   const location = useLocation();
 
@@ -41,7 +35,7 @@ const Navbar: React.FC = () => {
   return (
     <Disclosure
       as="nav"
-      className="container text-tierce z-10  flex items-center w-full h-[90px]  top-0 relative"
+      className="container text-tierce z-10 flex items-center w-full h-[90px] top-0 relative"
     >
       {({ open, close }) => (
         <>
@@ -52,24 +46,25 @@ const Navbar: React.FC = () => {
                   className="inline-flex items-center justify-center p-2 rounded-md text-gray-800
                    dark:text-white hover:bg-secondary hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset
                     focus:ring-white"
+                  aria-label="Menu"
                 >
-                  <span className="sr-only">Open main menu</span>
+                  <span className="sr-only">Ouvrir le menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w 6" aria-hidden="true" />
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
               <div className="hidden text-xs md:text-sm lg:text-base md:flex md:items-center md:space-x-4">
-                <Link className="top-10" to={"/"}>
+                <Link className="top-10" to={"/"} aria-label="Accueil MAUNN">
                   <img
                     className="block h-6 w-auto lg:hidden"
                     src={Logo}
-                    alt="maunn"
+                    alt="logo maunn"
                   />
                   <div className="hidden lg:flex lg:flex-row items-center">
-                    <img className="h-8 w-auto" src={Logo} alt="maunn" />
+                    <img className="h-8 w-auto" src={Logo} alt="logo maunn" />
                     <h1 className="text-white hover:text-secondary font-black gap-x-2 text-2xl mr-4 ml-2 transition-colors current">
                       MAUNN
                     </h1>
@@ -79,8 +74,8 @@ const Navbar: React.FC = () => {
                   <NavLink
                     key={item.name}
                     to={item.href}
-                    className={`px-3 py-2 rounded-md  font-bold  hover:underline ${
-                      location.pathname === item.href && " text-secondary"
+                    className={`px-3 py-2 rounded-md font-bold hover:underline ${
+                      location.pathname === item.href && "text-secondary"
                     }`}
                   >
                     {item.name}
@@ -91,17 +86,16 @@ const Navbar: React.FC = () => {
           </div>
 
           <Disclosure.Panel className="md:hidden">
-            <div className="space-y ">
+            <div className="space-y">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
                   onClick={() => {
                     close();
-                    console.log("yo le rap");
                   }}
                   className={`block rounded-2xl text-xl font-medium p-4 ${
-                    location.pathname === item.href && " dark:text-tierce"
+                    location.pathname === item.href && "dark:text-tierce"
                   }`}
                 >
                   {item.name}

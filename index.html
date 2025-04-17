@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" href="/logo_maunn_mono_purple.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Balises meta SEO de base -->
   <title>MAUNN - The desire to change technology.</title>
+  <meta name="description" content="MAUNN est l'architecte des grandes transformations des entreprises. Nous mettons en relations nos experts avec nos partenaires." />
+  <meta name="keywords" content="transformation numérique, MAUNN, technologies, consulting, expertise IT" />
+  <meta name="author" content="MAUNN" />
+  
+  <!-- Favicon versions -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#252E42">
+  <meta name="theme-color" content="#252E42">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.maunn.fr" />
+  
+  <!-- Structure données (Schema.org) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MAUNN",
+      "url": "https://www.maunn.fr",
+      "logo": "https://www.maunn.fr/logo_maunn_mono_purple.svg",
+      "description": "MAUNN est l'architecte des grandes transformations des entreprises.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "",
+        "contactType": "customer service",
+        "email": "contact-admin@info.maunn.fr",
+        "areaServed": "FR"
+      },
+      "sameAs": [
+        "https://fr.linkedin.com/company/maunn"
+      ]
+    }
+  </script>
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/index.tsx"></script>
+  <noscript>
+    <div style="text-align: center; padding: 20px; font-family: sans-serif;">
+      Veuillez activer JavaScript pour utiliser ce site.
+    </div>
+  </noscript>
 </body>
 
 </html>

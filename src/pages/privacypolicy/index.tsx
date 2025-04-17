@@ -11,12 +11,10 @@ const PrivacyPolicy: React.FC = () => {
         <p>
           Cette politique de confidentialité décrit comment notre structure
           recueille, utilise et protège les informations personnelles que vous
-          nous fournissez. En utilisant notre site Web, vous
-          acceptez les termes de cette politique de confidentialité.
+          nous fournissez. En utilisant notre site Web, vous acceptez les termes
+          de cette politique de confidentialité.
         </p>
-        <Link to="/privacy_app" className="mt-4 text-blue-600 hover:underline">
-          Voir la politique de confidentialité de l'application
-        </Link>
+
         <h2 className="text-xl  sm:text-2xl font-semibold mt-8 mb-4">
           Collecte d'informations
         </h2>
