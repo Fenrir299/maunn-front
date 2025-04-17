@@ -27,9 +27,9 @@ const Consulting: React.FC = () => {
           </dl>
         </div>
         <img
-          className="rounded-3xl hidden md:flex   h-auto ml-12 w-1/2 shadow-secondary/50 shadow-xl border-4 border-secondary contrast-75 "
-          alt="consulting"
-          src="https://source.unsplash.com/800x600/?computing"
+          className="rounded-3xl hidden md:flex   h-auto ml-12 w-1/3  "
+          alt="shardev"
+          src="../src/assets/sharkdev.png"
         ></img>
       </section>
     </Element>

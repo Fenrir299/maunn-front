@@ -34,7 +34,6 @@ const App: React.FC = () => {
         <Routes>
           {/* <Container> */}
           <Route path="/" element={<Homepage />} />
-          <Route path="/Island" element={<Island />} />
           <Route path="/Sectors" element={<Sector />} />
           <Route path="/Career" element={<Career />} />
           <Route path="/Partners" element={<Partners />} />

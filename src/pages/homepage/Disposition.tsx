@@ -6,9 +6,9 @@ const Disposition: React.FC = () => {
     <Element name="Activities">
       <section className="flex flex-col md:flex-row text-right items-center justify-between">
         <img
-          className="rounded-3xl hidden md:flex   h-auto mr-12 w-1/2 shadow-secondary/50 shadow-xl border-4 border-secondary contrast-75 "
-          alt="consulting"
-          src="https://source.unsplash.com/800x600/?consulting"
+          className="rounded-3xl hidden md:flex  h-auto mr-12 w-1/3  "
+          alt="sharkclaycolored"
+          src="../src/assets/sharkclassic.png"
         ></img>
         <div className="max-w-2xl">
           <dt className="text-2xl font-semdibold mb-1 text-white">
